@@ -1,10 +1,7 @@
-   //localStorage.clear() // wipe data
-   window.alert("yay");
    if ('listy' in localStorage) {} else {localStorage.listy=""};
-   $("a.l").each(function(){
+   $("h3.r a").each(function(){
      console.log($(this).attr('href'));
      localStorage.listy += $(this).attr('href') + '\n';
-     console.log(localStorage.listy.length);
    });
 
       
@@ -19,5 +16,8 @@
    //})
    
    //document.location = $("#pnnext").attr('href') // autoadvance
-   console.log(localStorage.listy) // display output
-   
+   console.log(localStorage.listy); // display output
+   console.log(localStorage.listy.match(/\n/g).length);
+   url = $('a#pnnext').attr('href');
+   window.location.href='https://www.google.co.uk/'+url;
+   //$('a#pnnext').click(); 
